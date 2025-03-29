@@ -1,5 +1,3 @@
-ArgentBank
-
 [Bank-Money](./Argent-Banque-Front-End/src/assets/argentBankLogo.png)
 
 
