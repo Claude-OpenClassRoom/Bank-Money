@@ -19,7 +19,7 @@ Phase 2: Modéliser l'API pour la gestion des transactions
 
 
 Compétences évaluées :
-- Implémenter un gestionnaire d'état dans une application React avec Redux et Redux Toolkit et RTK Query
+- Implémenter un gestionnaire de "states" dans une application React avec Redux et Redux Toolkit et RTK Query
 - S'authentifier à une API
 - Interagir avec une API
 - Modéliser une API

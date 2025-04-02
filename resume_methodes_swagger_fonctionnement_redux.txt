@@ -1,0 +1,66 @@
+Claude Erick RAKOTOARISOA--02/04/2025
+
+      
+ PROJET 10 : "Implémentez le front-end d'une application bancaire avec React"
+
+
+1) LES EXPLICATIONS DES DIFFRENTES METHODES DE SWAGGER : Bank Argent API (POST, GET, PUT, PATCH )
+
+   - METHODE POST : - l'API permet à l'utilisateur de soumettre des données ou des fichiers au serveur, par exemple pour remplir des formulaires ou télécharger des photos
+
+                    - l'API LOGIN permet de créer un token pour la connexion.
+
+   - METHODE GET : - l' API USER PROFILE permet de récupérer un profil utilisateur.
+
+		   - l' API TRANSACTIONS permet d' obtenir une transaction spécifique à partir d'un compte spécifique
+
+   - METHODE PUT : 
+                     - l'API permet la mise à jour si cette ressource existe déjà, et écrase un attribut d'une ressource pour un nouveau corps complet de message.
+
+                     - l' User Profile API par la méthode PUT permet la mise à jour d'un profil utilisateur.
+
+   - METHODE PATCH : - l'API permet la modification de un ou plusieurs attribut d'une ressource en fusionnant les données envoyées avec les  
+                      données déjà présentes ou grâce à l'utilisation d'opération de modification.
+
+                    - l'API TRANSACTIONS permet de modifier une note ou la catégorie d'une transaction spécifique. Si elle est définie comme une  
+                      chaîne vide, elle peut être considérée comme supprimé «deleted».
+
+
+
+2) LES EXPLICATIONS DU FONCTIONNEMENT DES POINTS PRINCIPAUX DE REDUX.
+
+Redux est une bibliothèque de gestion de state centralisé qui fournit un moyen prévisible de stocker et de mettre à jour le state global global de l’application.
+
+En utilisant Redux, on va stocker toutes les données dont on a besoin dans un seul « store », qui peut être partagé entre tous les composants de l’application.
+
+Redux utilise un mécanisme appelé « reducers » pour gérer les mises à jour de "state". Ce sont des fonctions qui vont produire un nouveau “state”. Cette approche facilite la gestion des mises à jour des "states"  ainsi que la gestion des interactions complexes entre les différents composants de l’application. Le reducer prend le state courant et les données que nous souhaitons modifier et retourne le nouveau state.
+
+Le reducer est associé à une action : Une action est un objet comportant un type qui permet de définir quel traitement effectuer sur le state, et un payload, c'est-à-dire une valeur qui sera utilisée afin de modifier la valeur du state.
+
+Le reducer transmet l'action à tous les stores qui, selon leur responsabilité, vont exécuter l’action, puis notifier aux composants abonnés que leur state a été modifié.
+
+Les composants peuvent ensuite venir récupérer les nouvelles valeurs du state et mettre à jour leur rendu.
+
+3) IMPLEMENTATON DE REDUX DANS L'APPLICATION REACT
+
+-  Ajouter notre package Redux Toolkit dans notre application REACT pour bénéficier de Redux dans notre application React et du package react-redux  , qui va nous permettre de manipuler le store dans nos composants par la commande :  npm install @reduxjs/toolkit react-redux
+
+- Importer les hooks de React dans chaque composant par : import React, { useEffect,useState } from 'react';
+
+               *useEffect : useEffect  pour attacher le state local de chacun de nos composants aux changements du store.
+               *useState  : Préserver les données et les évènements du state du store
+
+- Importer les hooks de React-Redux dans chaque composant par :  import { useSelector, useDispatch, useStore } from 'react-redux';
+
+               * useStore : nous pouvons utiliser le hook useStore  de react-redux pour accéder au store de Redux de nos composants, brancher chaque composant au store,
+
+               * useDispatch :Renvoyer les données récupérées de l'API dans state du store, met à jour le store de façon asynchrone.Le dispatcher centralise le changement du state et le renvoie au 
+                              store
+
+               * useSelector : - permet de réaliser deux choses essentielles pour accéder aux valeurs à jour de notre store, et accéder au state dans chacun de nos composants. et il récupère les  
+                                 states complets du store. donc accéder à toutes les valeurs. De plus, il s’abonne aux changements d’état du store.
+                               - remplace les useEffect  et setState  par un simple useSelector  dans nos fichiers, qui est beaucoup simple.
+                               - permet de connecter le composant aux changements du store.
+
+
+

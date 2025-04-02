@@ -195,8 +195,8 @@ paths:
         - Bearer: []
       tags:
         - Transaction Module
-      summary: Transaction API
-      description: API to modify a note or the category in a specific transaction. If set as an empty string, it can be consider as "deleted"
+      summary: Transaction API Modifie les informations sur les notes et categories
+      description: API permettant de modifier une note ou la catégorie d'une transaction spécifique. Si elle est définie comme une chaîne vide, elle peut être considérée comme supprimé «deleted».
       parameters:
         - in: header
           type: string
@@ -330,6 +330,3 @@ definitions:
     type: object
     properties:
       category:
-        type: string
-      notes:
-        type: string
