@@ -113,7 +113,7 @@ paths:
         '500':
           description: Internal Server Error
 
-  /transactions/{userId}/{accountId}:
+  /transactions/{accountId}:
     get:
       security:
         - Bearer: []
@@ -126,11 +126,6 @@ paths:
           type: string
           name: Authorization
           description: Attach Bearer JWT token
-          required: true
-        - in: path
-          type: string
-          name: userId
-          description: The user id
           required: true
         - in: path
           type: string
@@ -156,7 +151,7 @@ paths:
         "500":
           description: Internal Server Error
 
-  /transactions/{userId}/{accountId}/{transactionId}:
+  /transactions/{accountId}/{transactionId}:
     get:
       security:
           - Bearer: []
@@ -169,11 +164,6 @@ paths:
           type: string
           name: Authorization
           description: Attach Bearer JWT token
-          required: true
-        - in: path
-          type: string
-          name: userId
-          description: The user id
           required: true
         - in: path
           type: string
@@ -212,11 +202,6 @@ paths:
           type: string
           name: Authorization
           description: Attach Bearer JWT token
-          required: true
-        - in: path
-          type: string
-          name: userId
-          description: The user id
           required: true
         - in: path
           type: string

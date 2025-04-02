@@ -8,8 +8,8 @@ import '../sass/components/_Header.scss';
 function Header () {
     /* Updates user data on header component from state redux */
     const isConnected = useSelector((state) => state.auth.token);
-    const firstname = useSelector((state) => state.user.userData.firstname);
-
+    //const firstname = useSelector((state) => state.user.userData.firstname);
+    const username = useSelector((state) => state.user.userData.username);
     const dispatch = useDispatch();
     const navigate = useNavigate();
     
@@ -30,7 +30,7 @@ function Header () {
                     <div className='connected'>
                         <Link to='/profile'>
                             <i className='fa-solid fa-2x fa-circle-user' />
-                            <p>{firstname}</p>
+                            <p>{username}</p>
                         </Link>
                         <Link to='/' onClick={logoutHandler}>
                             <i className='fa-solid fa-arrow-right-from-bracket' />
